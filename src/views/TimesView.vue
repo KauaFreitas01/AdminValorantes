@@ -128,10 +128,11 @@ export default {
   width: 100vw;
 }
 #titulo {
-  margin-left: 30px;
-  margin-top: 25px;
   color: white;
   font-size: 10px;
+  position: fixed;
+  left: 23%;
+  top: 3%;
 }
 #AddTimesCard {
   width: 450px;

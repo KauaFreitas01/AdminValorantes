@@ -1,11 +1,10 @@
 <template>
-  <v-app>
+  <v-app id="app">
     <div id="CorpoApp">
       <div id="menuLateral">
         <v-img src="../public/download.png" id="logoValorant"></v-img>
         <nav>
           <v-list dense id="list">
-            <v-subheader id="valorante">VALORANTES</v-subheader>
             <v-list-item-group id="ListGroup">
               <v-list-item>
                 <v-list-item-icon>
@@ -42,6 +41,7 @@
             </v-list-item-group>
           </v-list>
         </nav>
+        <v-btn @click="logout" id="deslogar">deslogar</v-btn>
       </div>
       <div id="pageView">
         <router-view id="Views" />
@@ -49,19 +49,37 @@
     </div>
   </v-app>
 </template>
+<script>
+export default {
+  name: "App",
+  methods: {
+    logout() {
+      localStorage.removeItem("user");
+      this.$router.push("/login");
+    },
+  },
+};
+</script>
 <style lang="scss">
+#app {
+  width: auto;
+  height: auto;
+  background-color: black;
+}
 #pageView {
   width: 80%;
+  height: 100%;
   float: right;
   text-align: center;
   background-color: #2a2f74;
 }
 #Views {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 35vh;
+  margin-bottom: 25%;
 }
 #menuLateral {
   width: 20%;
+  height: 100%;
   float: left;
   position: fixed;
 }
@@ -71,8 +89,7 @@ nav {
     &.router-link-exact-active {
       background-color: red;
       color: white;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 17px;
       padding-top: 10px;
       padding-bottom: 10px;
       border-radius: 10px;
@@ -80,30 +97,28 @@ nav {
   }
 }
 #list {
-  background-color: rgba($color: #000000, $alpha: 0.9);
-  height: 1000px;
+  background-color: black;
+  margin-left: 10px;
 }
 #logoValorant {
   padding: 0;
-  height: 60px;
-  width: 60px;
-  float: left;
-  margin-left: 30px;
-  margin-top: 30px;
+  height: 10%;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 15%;
+  margin-bottom: 15%;
 }
-#valorante {
-  color: white;
-  margin-bottom: 100px;
-  margin-top: 30px;
-  font-size: 30px;
-  font-family: "Sigmar", cursive;
-}
-
 #ListGroup {
-  width: 200px;
-  margin: 15px;
+  width: 190px;
 }
 .v-list-item {
   margin-bottom: 30px;
+}
+#deslogar {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  background-color: red;
+  color: white;
 }
 </style>
