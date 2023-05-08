@@ -74,7 +74,7 @@ export default {
   background-color: #2a2f74;
 }
 #Views {
-  margin-top: 35vh;
+  margin-top: 10vh;
   margin-bottom: 25%;
 }
 #menuLateral {
