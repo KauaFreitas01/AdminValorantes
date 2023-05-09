@@ -221,6 +221,11 @@ export default {
         response[i].team2 = this.items.find(
           (item) => item.id == response[i].team2
         );
+        response[i].data = response[i].data
+          .split("T")[0]
+          .split("-")
+          .reverse()
+          .join("/");
       }
       this.Partidas = response;
     });
