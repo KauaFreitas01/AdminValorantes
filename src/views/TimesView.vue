@@ -6,7 +6,7 @@
       </div>
       <div id="AddTimes">
         <v-row>
-          <v-dialog v-model="dialog" width="450px">
+          <v-dialog v-model="dialog" width="27%">
             <template v-slot:activator="{ on, attrs }">
               <v-btn id="BtnAddTime" dark v-bind="attrs" v-on="on">
                 Adicionar Equipe
@@ -124,20 +124,19 @@ export default {
   position: fixed;
   height: 9vh;
   z-index: 1;
-  background-color: #2a2f74;
+  background-color: #03073a;
   width: 100vw;
 }
 #titulo {
   color: white;
-  font-size: 10px;
+  font-size: 70%;
   position: fixed;
   left: 23%;
   top: 3%;
 }
 #AddTimesCard {
-  width: 450px;
-  height: 370px;
-  padding: 30px;
+  padding: 1rem;
+  background-color: NONE;
 }
 #BtnAddTime {
   background-color: red;

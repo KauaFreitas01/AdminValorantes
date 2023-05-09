@@ -6,7 +6,7 @@
       </div>
       <div id="AddTimes">
         <v-row>
-          <v-dialog v-model="dialog" width="340px">
+          <v-dialog v-model="dialog" width="27%">
             <template v-slot:activator="{ on, attrs }">
               <v-btn id="BtnAddTime" dark v-bind="attrs" v-on="on">
                 Adicionar Partida
@@ -196,7 +196,6 @@ export default {
       if (valid == false) {
         return [alert("Campo obrigatório não preenchido")];
       }
-
       try {
         let AddMatchs = await axios.post(
           "https://api.valorantes.com.br/matchs/add",
@@ -258,8 +257,6 @@ export default {
   justify-content: center;
 }
 #cardForm {
-  padding: 10px;
-  height: 600px;
-  width: 340px;
+  padding: 1rem;
 }
 </style>
