@@ -30,7 +30,7 @@
               </v-list-item>
               <v-list-item>
                 <v-list-item-icon>
-                  <v-icon large color="white darken-2"> mdi-play </v-icon>
+                  <v-icon large color="white darken-2">mdi-play</v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
                   <router-link to="/matchs" style="color: white"
@@ -71,10 +71,10 @@ export default {
   height: 100%;
   float: right;
   text-align: center;
-  background-color: #2a2f74;
+  background-color: #0011ff33;
 }
 #Views {
-  margin-top: 10vh;
+  margin-top: 12vh;
   margin-bottom: 25%;
 }
 #menuLateral {
@@ -88,36 +88,35 @@ nav {
     text-decoration: none;
     &.router-link-exact-active {
       background-color: red;
-      color: white;
-      padding-left: 17px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-left: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
       border-radius: 10px;
     }
   }
 }
 #list {
   background-color: black;
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 #logoValorant {
   padding: 0;
-  height: 10%;
-  width: 30%;
+  height: 7vh;
+  width: 7vw;
   margin-left: 35%;
-  margin-top: 15%;
-  margin-bottom: 15%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 #ListGroup {
-  width: 190px;
+  width: 18vw;
 }
 .v-list-item {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 #deslogar {
   position: fixed;
-  bottom: 5px;
-  left: 5px;
+  bottom: 2rem;
+  left: 2rem;
   background-color: red;
   color: white;
 }

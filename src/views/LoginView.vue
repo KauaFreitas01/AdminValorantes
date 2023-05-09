@@ -5,16 +5,15 @@
         <h1>Login</h1>
         <label for="username">Usuário</label>
         <input type="text" id="username" v-model="username" />
-
         <label for="password">Senha</label>
         <input type="password" id="password" v-model="password" />
-
-        <button type="submit" @click.prevent="login">Entrar</button>
+        <button type="submit" @click.prevent="login" id="LoginButton">
+          Entrar
+        </button>
       </form>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -25,14 +24,12 @@ export default {
   },
   methods: {
     login() {
-      // Verifique as credenciais do usuário
       if (this.username === "admin" && this.password === "password") {
         // Armazene as credenciais no localStorage
         localStorage.setItem(
           "user",
           JSON.stringify({ username: this.username })
         );
-        // Redirecione para a página home
         this.$router.push("/");
       } else {
         alert("Credenciais inválidas");
@@ -41,7 +38,6 @@ export default {
   },
 };
 </script>
-
 <style>
 .container {
   display: contents;
@@ -52,7 +48,6 @@ export default {
   color: white;
   padding: 22rem;
 }
-
 h1 {
   margin-bottom: 2rem;
   text-align: center;
@@ -62,21 +57,18 @@ form {
   flex-direction: column;
   width: 25vw;
 }
-
 label {
   margin-bottom: 1rem;
 }
-
 input {
   padding: 0.5rem;
   background-color: white;
   margin-bottom: 1rem;
   border-radius: 5px;
   border: none;
-  box-shadow: 0 0 5px rgba(252, 2, 2, 0.521);
+  color: white;
 }
-
-button {
+#LoginButton {
   padding: 0.5rem;
   background-color: red;
   border-radius: 5px;
@@ -84,8 +76,7 @@ button {
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.397);
   cursor: pointer;
 }
-
-button:hover {
-  background-color: rgba(252, 2, 2, 0.521);
+#LoginButton:hover {
+  background-color: rgb(139, 2, 2);
 }
 </style>

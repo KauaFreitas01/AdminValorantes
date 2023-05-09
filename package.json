@@ -12,6 +12,7 @@
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
     "vue-router": "^3.6.5",
+    "vue-youtube-embed": "^2.2.2",
     "vuetify": "^2.6.0"
   },
   "devDependencies": {
